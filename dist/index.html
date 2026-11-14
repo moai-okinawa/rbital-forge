@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="RBITAL FORGE — アイデアを、次の軌道へ。デザインとものづくりの可能性を探るコンセプトポートフォリオ。">
+  <title>RBITAL FORGE — アイデアを、次の軌道へ。</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="RBITAL FORGE トップへ">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="m4 25 24-18M20 25l7 3" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        <span>RBITAL FORGE</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>メニュー <span aria-hidden="true">＋</span></button>
+      <nav id="site-nav" aria-label="メインナビゲーション">
+        <a href="#work">作品</a><a href="#about">私たちについて</a><a href="#process">つくりかた</a>
+        <a class="button button-small" href="#explore">もっと見る <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow"><span class="badge">CONCEPT PORTFOLIO</span> DESIGN × DEVELOPMENT</p>
+        <h1 id="hero-title">アイデアを、<br>次の軌道へ。</h1>
+        <p class="hero-description">小さなひらめきから、心に残る体験を。<br>RBITAL FORGEのデザインとものづくり。</p>
+        <div class="hero-actions"><a class="button" href="#work">作品を見る <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#about">RBITAL FORGEについて</a></div>
+        <div class="device-stage" role="img" aria-label="架空の作品ORBITを表示したパソコンと、FIELDを表示したスマートフォンのプレビュー">
+          <div class="laptop">
+            <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>rbital forge / concept preview</span><span aria-hidden="true">↗</span></div>
+            <div class="desktop-preview">
+              <div class="preview-sidebar"><span class="preview-logo">RF / LAB</span><span class="sidebar-active">Overview</span><span>Projects</span><span>Explorations</span><div class="sidebar-bottom">DESIGN STUDY<br>001 — ORBIT</div></div>
+              <div class="preview-content"><div class="preview-topline"><span>Selected project</span><span>01 / 03</span></div><h2>Space for<br>new perspectives.</h2><img src="assets/work-orbit.svg" alt="" width="1200" height="800" fetchpriority="high"><div class="preview-caption"><span>ORBIT</span><span>Brand exploration ↗</span></div></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+          <div class="phone"><div class="phone-camera"></div><div class="phone-screen"><div class="phone-top"><span>9:41</span><span>● ▰</span></div><div class="phone-title"><span>EXPLORATION / 003</span><strong>Find your<br>own field.</strong></div><img src="assets/work-field.svg" alt="" width="1200" height="800"><div class="phone-caption"><span>FIELD</span><span>Visual experiment</span></div><div class="phone-home"></div></div></div>
+        </div>
+        <p class="preview-note">アイデアを試す、コンセプト作品のプレビュー。</p>
+      </div>
+    </section>
+    <div class="discipline-band"><div class="container disciplines"><span>DESIGN WITH INTENT.</span><span>Brand identity</span><span>Web experience</span><span>Creative exploration</span></div></div>
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01</p><h2 id="work-title">考えたことを、<br class="mobile-break">かたちに。</h2></div><p>ブランド、ウェブ、ビジュアル。<br>3つの視点から広がる、ものづくりの実験。</p></div>
+      <div class="work-tools"><p class="sample-label">掲載作品はすべて架空のサンプルです。</p><div class="filters" role="group" aria-label="作品のカテゴリー" hidden><button type="button" data-filter="all" aria-pressed="true">すべて</button><button type="button" data-filter="brand" aria-pressed="false">ブランド</button><button type="button" data-filter="web" aria-pressed="false">ウェブ</button><button type="button" data-filter="experiment" aria-pressed="false">実験</button></div></div>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="project-grid">
+        <article class="project" data-category="brand">
+          <div class="project-art art-orbit"><img src="assets/work-orbit.svg" alt="白と淡い青の軌道を重ねた、ORBITのブランドビジュアル" width="1200" height="800" loading="lazy"><span class="art-label">ORBIT<span>BRAND STUDY / 001</span></span></div><div class="project-meta"><div><p class="project-category">BRAND IDENTITY</p><h3>ORBIT</h3><p>新しい視点をつくる、ブランドのかたち。</p></div></div><details class="project-disclosure"><summary aria-label="ORBITの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
+          <div class="project-detail"><p>軌道の重なりをモチーフに、変化し続けるアイデアを表現した架空のブランド。ひとつの図形から、ポスターやデジタル画面へ展開するビジュアルを考えました。</p><dl><div><dt>テーマ</dt><dd>視点・つながり・広がり</dd></div><div><dt>制作内容</dt><dd>コンセプト / ビジュアルスタディ</dd></div><div><dt>ステータス</dt><dd>サンプル・実案件ではありません</dd></div></dl></div>
+        </details></article>
+        <article class="project" data-category="web">
+          <div class="project-art art-relay"><img src="assets/work-relay.svg" alt="信号と端末を淡い青の背景に配置した、RELAYのインターフェーススタディ" width="1200" height="800" loading="lazy"><span class="art-label">RELAY<span>WEB STUDY / 002</span></span></div><div class="project-meta"><div><p class="project-category">WEB EXPERIENCE</p><h3>RELAY</h3><p>情報が、心地よくつながるインターフェース。</p></div></div><details class="project-disclosure"><summary aria-label="RELAYの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
+          <div class="project-detail"><p>点在する情報を、ひとつの流れに。信号を受け渡すリレーを着想に、余白と整列で使いやすさを考えた架空のウェブサービスのデザインスタディです。</p><dl><div><dt>テーマ</dt><dd>情報整理・流れ・接続</dd></div><div><dt>制作内容</dt><dd>画面構成 / インターフェーススタディ</dd></div><div><dt>ステータス</dt><dd>サンプル・サービス未提供</dd></div></dl></div>
+        </details></article>
+        <article class="project" data-category="experiment">
+          <div class="project-art art-field"><img src="assets/work-field.svg" alt="暗い背景に青灰色の等高線が広がる、FIELDのグラフィック" width="1200" height="800" loading="lazy"><span class="art-label">FIELD<span>VISUAL STUDY / 003</span></span></div><div class="project-meta"><div><p class="project-category">CREATIVE EXPLORATION</p><h3>FIELD</h3><p>線の重なりから、まだ見ぬ風景へ。</p></div></div><details class="project-disclosure"><summary aria-label="FIELDの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
+          <div class="project-detail"><p>等高線のような線の集まりを、デジタルの風景として捉えるビジュアル実験。規則的な形と余白のバランスから、奥行きとリズムを探りました。</p><dl><div><dt>テーマ</dt><dd>地形・反復・リズム</dd></div><div><dt>制作内容</dt><dd>グラフィック / SVGアートワーク</dd></div><div><dt>ステータス</dt><dd>サンプル・自主制作コンセプト</dd></div></dl></div>
+        </details></article>
+      </div>
+    </section>
+    <section class="about-band" id="about" aria-labelledby="about-title">
+      <div class="section container about-grid"><div><p class="eyebrow">ABOUT / 02</p><h2 id="about-title">つくることは、<br>可能性をひらくこと。</h2><p class="about-copy">RBITAL FORGEは、アイデアと表現の接点を探るためのポートフォリオ。見る人の視点が少し変わるような、そんなものづくりを目指す場所です。</p><p class="sample-label">この紹介文は仮の内容です。<br>プロフィールと実際の活動に合わせて更新予定です。</p></div><div class="principles"><div><span class="principle-icon" aria-hidden="true">◎</span><div><h3>本質から考える</h3><p>何を伝え、どんな体験を生み出すか。<br>まずは、問いを立てるところから。</p></div></div><div><span class="principle-icon" aria-hidden="true">⌘</span><div><h3>手を動かして試す</h3><p>小さくつくり、確かめ、磨いていく。<br>思考と実験を往復する。</p></div></div><div><span class="principle-icon" aria-hidden="true">↗</span><div><h3>その先につなげる</h3><p>完成をひとつの出発点に。<br>次のアイデアにつながる余白を残す。</p></div></div></div></div>
+    </section>
+    <section class="section container" id="process" aria-labelledby="process-title">
+      <div class="section-heading"><div><p class="eyebrow">THE PROCESS / 03</p><h2 id="process-title">ひらめきから、ひとつずつ。</h2></div><p>考える。つくる。磨く。<br>シンプルな積み重ねを、大切に。</p></div>
+      <ol class="process-grid"><li><span class="step-number">01</span><h3>Discover</h3><p class="step-jp">見つける</p><p>テーマを観察し、問いを立てる。<br>つくるものの軸を見つけます。</p></li><li><span class="step-number">02</span><h3>Make</h3><p class="step-jp">かたちにする</p><p>アイデアを小さく試作する。<br>見て、触れて、確かめます。</p></li><li><span class="step-number">03</span><h3>Refine</h3><p class="step-jp">磨きつづける</p><p>気づきをもとに、細部を整える。<br>次の可能性へつなげます。</p></li></ol>
+    </section>
+    <section class="explore-band" id="explore" aria-labelledby="explore-title"><div class="container"><p class="eyebrow">KEEP EXPLORING</p><h2 id="explore-title">次のアイデアも、ここから。</h2><p>RBITAL FORGEの小さな実験を、作品から。</p><a class="button" href="#work">作品をもう一度見る <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="container site-footer"><a class="brand" href="#top">RBITAL FORGE</a><p>Concept portfolio — サンプルコンテンツ</p><a href="#top">ページの先頭へ <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>

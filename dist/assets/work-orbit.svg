@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+<defs>
+  <linearGradient id="orbital-face" x1="230" y1="50" x2="900" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#171717"/><stop offset=".53" stop-color="#373c43"/><stop offset="1" stop-color="#171717"/></linearGradient>
+</defs>
+<path fill="#ffffff" d="M0 0h1200v800H0z"/>
+<path d="M72 72h1056v656H72z" stroke="#d1d7de"/>
+<path d="M72 400h1056M600 72v656" stroke="#d1d7de"/>
+<g transform="rotate(-32 600 400)">
+  <ellipse cx="600" cy="400" rx="356" ry="218" stroke="url(#orbital-face)" stroke-width="116"/>
+  <ellipse cx="600" cy="400" rx="414" ry="276" stroke="#a2adba" stroke-width="1"/>
+  <ellipse cx="600" cy="400" rx="298" ry="160" stroke="#a2adba" stroke-width="1"/>
+</g>
+<g transform="rotate(43 600 400)">
+  <ellipse cx="600" cy="400" rx="135" ry="330" stroke="#ffffff" stroke-width="22"/>
+  <ellipse cx="600" cy="400" rx="135" ry="330" stroke="#171717" stroke-width="6"/>
+</g>
+<circle cx="600" cy="400" r="23" fill="#a8c8e8" stroke="#171717" stroke-width="2"/>
+<path d="M55 72h34M72 55v34m1039-17h34m-17-17v34M55 728h34m-17-17v34m1039-17h34m-17-17v34" stroke="#171717" stroke-width="2"/>
+<g fill="#171717"><path d="M95 105h47v5H95zm0 11h28v3H95zm935 568h75v4h-75zm46-13h29v4h-29z"/><circle cx="1095" cy="110" r="7"/></g>
+</svg>
