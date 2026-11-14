@@ -4,80 +4,341 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="RBITAL FORGE — アイデアを、次の軌道へ。デザインとものづくりの可能性を探るコンセプトポートフォリオ。">
-  <title>RBITAL FORGE — アイデアを、次の軌道へ。</title>
+  <meta name="description" content="ORBITAL FORGE — 地球の限界を、製造の限界にしない。 2038年を舞台にした架空の宇宙産業企業。軌道上製造、宇宙建設、物流、月面インフラの事業設定を紹介します。">
+  <title>ORBITAL FORGE — 地球の限界を、製造の限界にしない。</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="site.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="RBITAL FORGE トップへ">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="m4 25 24-18M20 25l7 3" fill="none" stroke="currentColor" stroke-width="3"/></svg>
-        <span>RBITAL FORGE</span>
-      </a>
+      <a class="brand" href="#top" aria-label="ORBITAL FORGE トップへ"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="m4 25 24-18M20 25l7 3" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>ORBITAL FORGE</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>メニュー <span aria-hidden="true">＋</span></button>
-      <nav id="site-nav" aria-label="メインナビゲーション">
-        <a href="#work">作品</a><a href="#about">私たちについて</a><a href="#process">つくりかた</a>
-        <a class="button button-small" href="#explore">もっと見る <span aria-hidden="true">↗</span></a>
-      </nav>
+      <nav id="site-nav" aria-label="メインナビゲーション"><a href="#business">事業内容</a><a href="#facility">主力施設</a><a href="#achievements">代表実績</a><a class="button button-small" href="#company">企業概要 <span aria-hidden="true">↗</span></a></nav>
     </div>
   </header>
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container">
-        <p class="eyebrow"><span class="badge">CONCEPT PORTFOLIO</span> DESIGN × DEVELOPMENT</p>
-        <h1 id="hero-title">アイデアを、<br>次の軌道へ。</h1>
-        <p class="hero-description">小さなひらめきから、心に残る体験を。<br>RBITAL FORGEのデザインとものづくり。</p>
-        <div class="hero-actions"><a class="button" href="#work">作品を見る <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#about">RBITAL FORGEについて</a></div>
-        <div class="device-stage" role="img" aria-label="架空の作品ORBITを表示したパソコンと、FIELDを表示したスマートフォンのプレビュー">
-          <div class="laptop">
-            <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>rbital forge / concept preview</span><span aria-hidden="true">↗</span></div>
-            <div class="desktop-preview">
-              <div class="preview-sidebar"><span class="preview-logo">RF / LAB</span><span class="sidebar-active">Overview</span><span>Projects</span><span>Explorations</span><div class="sidebar-bottom">DESIGN STUDY<br>001 — ORBIT</div></div>
-              <div class="preview-content"><div class="preview-topline"><span>Selected project</span><span>01 / 03</span></div><h2>Space for<br>new perspectives.</h2><img src="assets/work-orbit.svg" alt="" width="1200" height="800" fetchpriority="high"><div class="preview-caption"><span>ORBIT</span><span>Brand exploration ↗</span></div></div>
-            </div>
+        <p class="eyebrow"><span class="badge">FICTIONAL COMPANY / 2038</span> SPACE IS OUR NEXT FACTORY.</p>
+        <h1 id="hero-title">地球の限界を、<br>製造の限界にしない。</h1>
+        <p class="hero-description">地球の外でつくり、地球の未来へ届ける。<br>軌道上の無人工場から、月面の産業基盤まで。</p>
+        <div class="hero-actions"><a class="button" href="#business">12の事業を見る <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#facility">FORGE-01を知る</a></div>
+        <p class="fiction-note">企業・事業・実績・数値は、2038年を舞台とした創作です。</p>
+        <div class="mission-stage" role="img" aria-label="MISSION OSの架空の操作画面。FORGE-01のコンセプト図と、2038年末の架空設定を表示しています。実際の運用画面ではありません。">
+          <div class="mission-desktop">
+            <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>MISSION OS / CONCEPT INTERFACE</span><span>2038</span></div>
+            <div class="mission-layout"><div class="mission-sidebar"><strong>OF / MISSION OS</strong><span class="selected">Overview</span><span>Manufacturing</span><span>Robotics</span><span>Logistics</span><span>Utilities</span><small>FICTIONAL DATA<br>NOT A LIVE SYSTEM</small></div><div class="mission-canvas"><div class="mission-topline"><span>ORBITAL NETWORK</span><span>FORGE-01 / LEO</span></div><div class="mission-title"><strong>Manufacturing.<br>Beyond Earth.</strong><span>420 <small>km</small></span></div><img src="assets/forge-platform.svg" alt="" width="1200" height="800" fetchpriority="high"><div class="mission-stats"><span>FACTORIES<strong>6</strong></span><span>ANNUAL OUTPUT<strong>18.4 <small>t</small></strong></span><span>RETURN MISSIONS<strong>128</strong></span></div></div></div>
           </div>
-          <div class="laptop-base"></div>
-          <div class="phone"><div class="phone-camera"></div><div class="phone-screen"><div class="phone-top"><span>9:41</span><span>● ▰</span></div><div class="phone-title"><span>EXPLORATION / 003</span><strong>Find your<br>own field.</strong></div><img src="assets/work-field.svg" alt="" width="1200" height="800"><div class="phone-caption"><span>FIELD</span><span>Visual experiment</span></div><div class="phone-home"></div></div></div>
+          <div class="mission-mobile"><div class="phone-camera"></div><p>MISSION OS</p><span class="mobile-tag">2038 / CONCEPT</span><strong class="mobile-heading">One network.<br>New possibilities.</strong><img src="assets/forge-platform.svg" alt="" width="1200" height="800"><div class="mobile-metric"><span>軌道上製造拠点</span><strong>6 <small>拠点</small></strong></div><div class="mobile-bottom"><span>年間製造量</span><strong>18.4 t</strong></div><div class="phone-home"></div></div>
         </div>
-        <p class="preview-note">アイデアを試す、コンセプト作品のプレビュー。</p>
+        <p class="preview-note">FORGE-01とMISSION OSのコンセプトイメージ。実際の施設・運用画面ではありません。</p>
       </div>
     </section>
-    <div class="discipline-band"><div class="container disciplines"><span>DESIGN WITH INTENT.</span><span>Brand identity</span><span>Web experience</span><span>Creative exploration</span></div></div>
-    <section class="section container" id="work" aria-labelledby="work-title">
-      <div class="section-heading"><div><p class="eyebrow">SELECTED WORK / 01</p><h2 id="work-title">考えたことを、<br class="mobile-break">かたちに。</h2></div><p>ブランド、ウェブ、ビジュアル。<br>3つの視点から広がる、ものづくりの実験。</p></div>
-      <div class="work-tools"><p class="sample-label">掲載作品はすべて架空のサンプルです。</p><div class="filters" role="group" aria-label="作品のカテゴリー" hidden><button type="button" data-filter="all" aria-pressed="true">すべて</button><button type="button" data-filter="brand" aria-pressed="false">ブランド</button><button type="button" data-filter="web" aria-pressed="false">ウェブ</button><button type="button" data-filter="experiment" aria-pressed="false">実験</button></div></div>
+    <section class="metrics-band" aria-label="2038年末の架空の事業規模"><div class="container"><div class="metrics"><div><strong>6<span>拠点</span></strong><p>軌道上製造拠点</p></div><div><strong>18.4<span>トン</span></strong><p>年間製造量</p></div><div><strong>128<span>回</span></strong><p>累計帰還ミッション</p></div><div><strong>42<span>件</span></strong><p>年間共同開発案件</p></div></div><p class="reference-note">※ 数値は2038年末時点の架空設定。</p></div></section>
+    <section class="section container" id="business" aria-labelledby="business-title">
+      <div class="section-heading"><div><p class="eyebrow">OUR BUSINESS / 01</p><h2 id="business-title">宇宙の産業を、<br>ひとつにつなぐ。</h2></div><p>研究から製造、建設、運用、輸送、再資源化まで。<br>宇宙でものづくりを続けるための、12の事業。</p></div>
+      <div class="business-tools"><p class="fiction-label">2038年を舞台とした架空の事業設定</p><div class="filters" role="group" aria-label="事業のカテゴリー" hidden><button type="button" data-filter="all" aria-pressed="true">すべて <span>12</span></button><button type="button" data-filter="manufacturing" aria-pressed="false">製造・研究 <span>4</span></button><button type="button" data-filter="operations" aria-pressed="false">建設・運用 <span>5</span></button><button type="button" data-filter="logistics" aria-pressed="false">輸送・循環 <span>2</span></button><button type="button" data-filter="lunar" aria-pressed="false">月面開発 <span>1</span></button></div></div>
       <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
-      <div class="project-grid">
-        <article class="project" data-category="brand">
-          <div class="project-art art-orbit"><img src="assets/work-orbit.svg" alt="白と淡い青の軌道を重ねた、ORBITのブランドビジュアル" width="1200" height="800" loading="lazy"><span class="art-label">ORBIT<span>BRAND STUDY / 001</span></span></div><div class="project-meta"><div><p class="project-category">BRAND IDENTITY</p><h3>ORBIT</h3><p>新しい視点をつくる、ブランドのかたち。</p></div></div><details class="project-disclosure"><summary aria-label="ORBITの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
-          <div class="project-detail"><p>軌道の重なりをモチーフに、変化し続けるアイデアを表現した架空のブランド。ひとつの図形から、ポスターやデジタル画面へ展開するビジュアルを考えました。</p><dl><div><dt>テーマ</dt><dd>視点・つながり・広がり</dd></div><div><dt>制作内容</dt><dd>コンセプト / ビジュアルスタディ</dd></div><div><dt>ステータス</dt><dd>サンプル・実案件ではありません</dd></div></dl></div>
-        </details></article>
-        <article class="project" data-category="web">
-          <div class="project-art art-relay"><img src="assets/work-relay.svg" alt="信号と端末を淡い青の背景に配置した、RELAYのインターフェーススタディ" width="1200" height="800" loading="lazy"><span class="art-label">RELAY<span>WEB STUDY / 002</span></span></div><div class="project-meta"><div><p class="project-category">WEB EXPERIENCE</p><h3>RELAY</h3><p>情報が、心地よくつながるインターフェース。</p></div></div><details class="project-disclosure"><summary aria-label="RELAYの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
-          <div class="project-detail"><p>点在する情報を、ひとつの流れに。信号を受け渡すリレーを着想に、余白と整列で使いやすさを考えた架空のウェブサービスのデザインスタディです。</p><dl><div><dt>テーマ</dt><dd>情報整理・流れ・接続</dd></div><div><dt>制作内容</dt><dd>画面構成 / インターフェーススタディ</dd></div><div><dt>ステータス</dt><dd>サンプル・サービス未提供</dd></div></dl></div>
-        </details></article>
-        <article class="project" data-category="experiment">
-          <div class="project-art art-field"><img src="assets/work-field.svg" alt="暗い背景に青灰色の等高線が広がる、FIELDのグラフィック" width="1200" height="800" loading="lazy"><span class="art-label">FIELD<span>VISUAL STUDY / 003</span></span></div><div class="project-meta"><div><p class="project-category">CREATIVE EXPLORATION</p><h3>FIELD</h3><p>線の重なりから、まだ見ぬ風景へ。</p></div></div><details class="project-disclosure"><summary aria-label="FIELDの作品詳細"><span>作品の詳細</span><span class="project-toggle" aria-hidden="true">＋</span></summary>
-          <div class="project-detail"><p>等高線のような線の集まりを、デジタルの風景として捉えるビジュアル実験。規則的な形と余白のバランスから、奥行きとリズムを探りました。</p><dl><div><dt>テーマ</dt><dd>地形・反復・リズム</dd></div><div><dt>制作内容</dt><dd>グラフィック / SVGアートワーク</dd></div><div><dt>ステータス</dt><dd>サンプル・自主制作コンセプト</dd></div></dl></div>
-        </details></article>
-      </div>
+      <div class="business-grid"><article class="business" id="orbital-factories" data-category="manufacturing">
+  <div class="business-heading"><span class="business-number">01</span><span class="category-label">製造・研究</span></div>
+  <h3>ORBITAL FACTORIES</h3><p class="business-title">軌道上無人工場の開発・運営</p>
+  <p class="business-intro">地球低軌道に、モジュールを組み合わせて拡張できる無人工場を建設する。
+製造設備、電力、温度管理、品質検査、通信、製品回収をまとめて提供する。</p>
+  <details><summary aria-label="事業の詳細：ORBITAL FACTORIES"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>顧客は宇宙工場を自社で所有せず、必要な製造設備と稼働時間を利用できる。小規模な試作から専用ラインによる継続生産まで対応。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>専用製造モジュールの開発</li>
+<li>共同利用型の製造セル</li>
+<li>遠隔製造と自律運転</li>
+<li>品質検査と製造履歴の管理</li>
+<li>完成品の地球回収</li>
+<li>試作から量産への移行支援</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>先端素材メーカー、半導体関連企業、研究機関</dd></div><div><dt>収益源</dt><dd>設備利用料、製造受託料、専用モジュール開発費</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="crystal-engineering" data-category="manufacturing">
+  <div class="business-heading"><span class="business-number">02</span><span class="category-label">製造・研究</span></div>
+  <h3>CRYSTAL ENGINEERING</h3><p class="business-title">次世代結晶・電子材料の開発</p>
+  <p class="business-intro">微小重力環境を製造条件として活用し、光学素子や電子デバイス向けの結晶材料を開発する。</p>
+  <details><summary aria-label="事業の詳細：CRYSTAL ENGINEERING"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>材料の設計、軌道上での結晶成長、地球帰還後の分析まで一貫して担当。顧客が求める特性に合わせ、材料組成や製造条件を探索する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>結晶成長実験</li>
+<li>材料組成の設計</li>
+<li>製造条件の最適化</li>
+<li>試験ロットの製造</li>
+<li>微細構造と品質の分析</li>
+<li>製品用途に合わせた共同開発</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>半導体材料企業、光学機器メーカー、量子デバイス開発企業</dd></div><div><dt>収益源</dt><dd>共同開発費、材料販売、製造技術ライセンス</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="photonic-materials" data-category="manufacturing">
+  <div class="business-heading"><span class="business-number">03</span><span class="category-label">製造・研究</span></div>
+  <h3>PHOTONIC MATERIALS</h3><p class="business-title">宇宙製光ファイバー・光学部材</p>
+  <p class="business-intro">通信、医療、精密計測などで使用する特殊光ファイバーや光学部材を製造する。</p>
+  <details><summary aria-label="事業の詳細：PHOTONIC MATERIALS"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>素材の配合から線引き、巻き取り、品質検査までを設計し、顧客独自の用途に対応する光学材料を供給する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>特殊ガラスの開発</li>
+<li>軌道上での光ファイバー製造</li>
+<li>レーザー用部材の試作</li>
+<li>光学特性の測定</li>
+<li>耐熱性や耐環境性の評価</li>
+<li>継続的な製品供給</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>通信機器メーカー、医療機器メーカー、精密計測企業</dd></div><div><dt>収益源</dt><dd>部材販売、用途別開発費、長期供給契約</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="frontier-lab" data-category="manufacturing">
+  <div class="business-heading"><span class="business-number">04</span><span class="category-label">製造・研究</span></div>
+  <h3>FRONTIER LAB</h3><p class="business-title">宇宙実験・共同研究</p>
+  <p class="business-intro">企業や大学の研究テーマを、宇宙で実施できる実験へと具体化する。</p>
+  <details><summary aria-label="事業の詳細：FRONTIER LAB"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>材料、流体、熱制御、バイオ関連などの研究に対応。専門の宇宙開発チームを持たない組織にも、実験装置の開発から結果の解析までを提供する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>研究テーマの実現性検討</li>
+<li>実験計画の作成</li>
+<li>専用実験装置の開発</li>
+<li>軌道上での実験運用</li>
+<li>試料の地球帰還</li>
+<li>データ解析</li>
+<li>製品化に向けた次段階の研究支援</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>大学、企業の研究開発部門、新規事業チーム</dd></div><div><dt>収益源</dt><dd>実験実施費、装置開発費、共同研究契約</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="orbital-construction" data-category="operations">
+  <div class="business-heading"><span class="business-number">05</span><span class="category-label">建設・運用</span></div>
+  <h3>ORBITAL CONSTRUCTION</h3><p class="business-title">軌道上での大型構造物建設</p>
+  <p class="business-intro">地上から完成品を打ち上げるのではなく、部材を宇宙へ運び、軌道上で組み立てる。</p>
+  <details><summary aria-label="事業の詳細：ORBITAL CONSTRUCTION"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>ロケットに収まる大きさを超えた工場、大型アンテナ、観測設備、太陽光発電設備などを建設する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>宇宙構造物の設計</li>
+<li>部材と接合機構の開発</li>
+<li>建設工程の計画</li>
+<li>ロボットによる自律組み立て</li>
+<li>接合部と構造の検査</li>
+<li>既存施設の増設と保守</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>宇宙通信企業、観測事業者、宇宙施設運営企業</dd></div><div><dt>収益源</dt><dd>設計施工費、増設工事費、保守契約</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="autonomous-robotics" data-category="operations">
+  <div class="business-heading"><span class="business-number">06</span><span class="category-label">建設・運用</span></div>
+  <h3>AUTONOMOUS ROBOTICS</h3><p class="business-title">宇宙作業ロボットの開発</p>
+  <p class="business-intro">人が常駐しない宇宙施設で、組み立て、搬送、点検、修理を行うロボットを開発する。</p>
+  <details><summary aria-label="事業の詳細：AUTONOMOUS ROBOTICS"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>通信の遅延や中断を考慮し、地上からの監視と自律制御を組み合わせて作業を継続する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>多関節ロボットアーム</li>
+<li>施設内の搬送ロボット</li>
+<li>外壁や設備の点検ロボット</li>
+<li>工具の自動交換機構</li>
+<li>部品交換システム</li>
+<li>自律作業計画ソフトウェア</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>宇宙施設運営企業、衛星メーカー、月面開発事業者</dd></div><div><dt>収益源</dt><dd>ロボット販売、機体利用料、制御ソフトウェア利用料</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="space-utilities" data-category="operations">
+  <div class="business-heading"><span class="business-number">07</span><span class="category-label">建設・運用</span></div>
+  <h3>SPACE UTILITIES</h3><p class="business-title">宇宙施設の電力・熱・通信</p>
+  <p class="business-intro">宇宙工場や研究施設を動かす共通インフラを提供する。</p>
+  <details><summary aria-label="事業の詳細：SPACE UTILITIES"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>発電、蓄電、放熱、通信を統合し、施設全体の稼働状況と生産計画に合わせて管理する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>大型太陽電池アレイ</li>
+<li>蓄電モジュール</li>
+<li>電力供給システム</li>
+<li>展開式の放熱設備</li>
+<li>施設間の通信中継</li>
+<li>設備監視と異常検知</li>
+<li>インフラの増強と更新</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>宇宙工場、研究施設、軌道上プラットフォーム</dd></div><div><dt>収益源</dt><dd>設備導入費、運用契約、供給容量に応じた利用料</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="mission-os" data-category="operations">
+  <div class="business-heading"><span class="business-number">08</span><span class="category-label">建設・運用</span></div>
+  <h3>MISSION OS</h3><p class="business-title">宇宙産業の統合運用プラットフォーム</p>
+  <p class="business-intro">宇宙工場、作業ロボット、貨物、電力を一つのシステムで管理する。</p>
+  <details><summary aria-label="事業の詳細：MISSION OS"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>デジタルツインで設備の状態を再現し、製造工程、設備の保守、原材料の補充、完成品の回収をまとめて計画する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>工場のデジタルツイン</li>
+<li>生産計画と工程管理</li>
+<li>設備の異常検知</li>
+<li>ロボットの作業管理</li>
+<li>原材料と製品の在庫管理</li>
+<li>品質記録と製造履歴</li>
+<li>輸送スケジュールの調整</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>宇宙施設運営企業、宇宙製造事業者、共同研究プロジェクト</dd></div><div><dt>収益源</dt><dd>ソフトウェア利用料、導入支援費、運用サポート費</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="earth-orbit-logistics" data-category="logistics">
+  <div class="business-heading"><span class="business-number">09</span><span class="category-label">輸送・循環</span></div>
+  <h3>EARTH–ORBIT LOGISTICS</h3><p class="business-title">地球と宇宙をつなぐ物流</p>
+  <p class="business-intro">原材料、製造装置、交換部品を宇宙へ届け、完成品や研究試料を地球へ戻す。</p>
+  <details><summary aria-label="事業の詳細：EARTH–ORBIT LOGISTICS"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>打ち上げ事業者や回収拠点と連携し、地上での受け取りから軌道上配送、帰還後の納品までを管理する。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>貨物の設計と梱包</li>
+<li>打ち上げ手配</li>
+<li>軌道間の貨物輸送</li>
+<li>輸送中の温度管理</li>
+<li>帰還カプセルの運用</li>
+<li>地上での回収と検査</li>
+<li>顧客施設への最終配送</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>素材メーカー、研究機関、宇宙工場運営企業</dd></div><div><dt>収益源</dt><dd>貨物輸送料、定期回収契約、専用輸送サービス</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="orbital-servicing" data-category="operations">
+  <div class="business-heading"><span class="business-number">10</span><span class="category-label">建設・運用</span></div>
+  <h3>ORBITAL SERVICING</h3><p class="business-title">衛星・宇宙設備の点検、修理、延命</p>
+  <p class="business-intro">運用中の衛星や宇宙設備に接近し、点検や整備を行う。</p>
+  <details><summary aria-label="事業の詳細：ORBITAL SERVICING"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>交換可能な部品の修理、対応衛星への補給、設備の移設などによって、宇宙資産を長く活用できる状態をつくる。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>近接撮影と外観検査</li>
+<li>交換可能ユニットの整備</li>
+<li>対応機器への推進剤補給</li>
+<li>軌道変更と設備移設</li>
+<li>運用終了時の処理支援</li>
+<li>保守を前提とした設備設計</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>衛星通信事業者、地球観測企業、宇宙設備運営企業</dd></div><div><dt>収益源</dt><dd>作業ミッション費、定期点検契約、延命サービス費</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="lunar-infrastructure" data-category="lunar">
+  <div class="business-heading"><span class="business-number">11</span><span class="category-label">月面開発</span></div>
+  <h3>LUNAR INFRASTRUCTURE</h3><p class="business-title">月面建設・現地資源利用</p>
+  <p class="business-intro">月面の砂や岩石を建設材料として利用し、継続的な月面活動に必要な基盤を整備する。</p>
+  <details><summary aria-label="事業の詳細：LUNAR INFRASTRUCTURE"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>掘削、運搬、材料加工、施工をロボット群が担当し、地球から輸送する建設資材を減らす。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>地形調査</li>
+<li>現地資源の評価</li>
+<li>建設材料の加工</li>
+<li>走行路の施工</li>
+<li>設備基礎の建設</li>
+<li>遮蔽構造の施工</li>
+<li>施工後の検査と補修</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>月面輸送企業、探査事業者、月面施設開発企業</dd></div><div><dt>収益源</dt><dd>調査費、設計施工費、建設ロボットの運用契約</dd></div></dl>
+    </div>
+  </details>
+</article>
+<article class="business" id="circular-orbit" data-category="logistics">
+  <div class="business-heading"><span class="business-number">12</span><span class="category-label">輸送・循環</span></div>
+  <h3>CIRCULAR ORBIT</h3><p class="business-title">宇宙設備の回収・再資源化</p>
+  <p class="business-intro">自社施設や回収契約を結んだ設備の不要部材を回収し、検査、分解、再加工によって新たな資材へ戻す。</p>
+  <details><summary aria-label="事業の詳細：CIRCULAR ORBIT"><span>事業の詳細</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary>
+    <div class="detail-body"><p>宇宙で使った資源を次の製造へつなげ、地球からの物資補給への依存を減らす。</p>
+      <h4>提供サービス</h4><ul class="service-list"><li>契約に基づく設備と部材の回収</li>
+<li>材料の選別</li>
+<li>部品の再使用と再認証</li>
+<li>金属材料の再加工</li>
+<li>施設内の水や加工材の循環利用</li>
+<li>再利用を前提とした設備設計</li></ul>
+      <dl class="detail-facts"><div><dt>主な顧客</dt><dd>衛星メーカー、宇宙施設運営企業、軌道上建設事業者</dd></div><div><dt>収益源</dt><dd>回収処理費、再生資材の販売、循環設備の導入費</dd></div></dl>
+    </div>
+  </details>
+</article></div>
     </section>
-    <section class="about-band" id="about" aria-labelledby="about-title">
-      <div class="section container about-grid"><div><p class="eyebrow">ABOUT / 02</p><h2 id="about-title">つくることは、<br>可能性をひらくこと。</h2><p class="about-copy">RBITAL FORGEは、アイデアと表現の接点を探るためのポートフォリオ。見る人の視点が少し変わるような、そんなものづくりを目指す場所です。</p><p class="sample-label">この紹介文は仮の内容です。<br>プロフィールと実際の活動に合わせて更新予定です。</p></div><div class="principles"><div><span class="principle-icon" aria-hidden="true">◎</span><div><h3>本質から考える</h3><p>何を伝え、どんな体験を生み出すか。<br>まずは、問いを立てるところから。</p></div></div><div><span class="principle-icon" aria-hidden="true">⌘</span><div><h3>手を動かして試す</h3><p>小さくつくり、確かめ、磨いていく。<br>思考と実験を往復する。</p></div></div><div><span class="principle-icon" aria-hidden="true">↗</span><div><h3>その先につなげる</h3><p>完成をひとつの出発点に。<br>次のアイデアにつながる余白を残す。</p></div></div></div></div>
+    <section class="facility-band" id="facility" aria-labelledby="facility-title"><div class="section container">
+      <div class="section-heading"><div><p class="eyebrow">FLAGSHIP FACILITY / 02</p><h2 id="facility-title">FORGE-01</h2></div><p>軌道上無人製造プラットフォーム<br>2031年稼働開始 — 架空の施設設定</p></div>
+      <figure class="facility-visual"><img src="assets/forge-platform.svg" alt="円筒状の製造モジュール、トラス、太陽電池パネル、ロボットアームを組み合わせたFORGE-01のコンセプト図" width="1200" height="800" loading="lazy"><figcaption><span>FORGE-01 / CONCEPT ILLUSTRATION</span><span>LOW EARTH ORBIT</span></figcaption></figure>
+      <div class="facility-grid"><div class="facility-copy"><p class="eyebrow">THE FIRST FACTORY</p><h3>宇宙製造を、<br>ひとつの拠点から。</h3><p>2031年に稼働を開始した初号工場。
+地球の上空420kmで、製造設備の自律運転と地上からの監視を組み合わせて稼働する。</p>
+<p>設計上の最大構成は24モジュール。
+顧客の製造工程に合わせて設備を追加・交換できる。</p><p class="facility-role">宇宙製造の研究、試作、商用生産を一つの拠点でつなぐ。</p></div><div><dl class="facility-specs"><div><dt>地球からの高度</dt><dd>420<span>km</span></dd></div><div><dt>設計上の最大構成</dt><dd>24<span>モジュール</span></dd></div></dl><h3 class="equipment-title">主な設備</h3><ul class="equipment-list"><li>結晶成長炉</li>
+<li>特殊光ファイバー製造設備</li>
+<li>実験用製造セル</li>
+<li>品質検査装置</li>
+<li>作業ロボット</li>
+<li>電力と熱制御設備</li>
+<li>貨物ドッキングポート</li></ul></div></div>
+    </div></section>
+    <section class="section container" id="achievements" aria-labelledby="achievements-title">
+      <div class="section-heading"><div><p class="eyebrow">MILESTONES / 03</p><h2 id="achievements-title">最初の工場から、<br>宇宙に広がる産業へ。</h2></div><p>2031 — 2038<br>6つの代表実績。すべて創作のプロジェクトです。</p></div>
+      <div class="achievement-grid"><article class="achievement" id="project-first-light">
+  <div class="achievement-year">2031<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT FIRST LIGHT</p><h3>初の宇宙製造・地球帰還</h3>
+  <p class="achievement-description">FORGE-01で特殊光ファイバーを製造し、完成品を地球へ回収。
+製造、検査、梱包、帰還までの工程を実証した。</p>
+  <details><summary aria-label="成果を見る：PROJECT FIRST LIGHT"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>軌道上の製造・運用期間：180日</li>
+<li>光ファイバー製造量：累計12.8km</li>
+<li>地球帰還：3回</li></ul></div></details>
+  <blockquote>「最初の工場が、地球の外で動き始めた。」</blockquote>
+</article>
+<article class="achievement" id="project-pure">
+  <div class="achievement-year">2033<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT PURE</p><h3>結晶材料の商用供給</h3>
+  <p class="achievement-description">独自の結晶成長モジュールで製造条件を検証。
+光学用途の要求仕様に対応した商用ロットを納入した。</p>
+  <details><summary aria-label="成果を見る：PROJECT PURE"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>検証した製造条件：214パターン</li>
+<li>評価した結晶試料：1,200点</li>
+<li>商用供給を開始した材料：3種類</li></ul></div></details>
+  <blockquote>「目に見えない構造から、産業を変える。」</blockquote>
+</article>
+<article class="achievement" id="project-span">
+  <div class="achievement-year">2034<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT SPAN</p><h3>大型宇宙構造物の無人建設</h3>
+  <p class="achievement-description">4機の作業ロボットで、工場の電力設備を支える大型トラスを建設。
+部材の接合から構造検査まで無人で実施した。</p>
+  <details><summary aria-label="成果を見る：PROJECT SPAN"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>完成した構造物の全長：180m</li>
+<li>組み立て期間：26日</li>
+<li>接合箇所：432か所</li></ul></div></details>
+  <blockquote>「打ち上げられる大きさを、超えていく。」</blockquote>
+</article>
+<article class="achievement" id="project-return">
+  <div class="achievement-year">2035<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT RETURN</p><h3>定期帰還物流の運用開始</h3>
+  <p class="achievement-description">複数の宇宙工場から製品を回収する定期物流サービスを開始。
+顧客が地上での納期に合わせて宇宙製造を計画できる体制を構築した。</p>
+  <details><summary aria-label="成果を見る：PROJECT RETURN"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>2035年の帰還ミッション：24回</li>
+<li>同年の回収製品と試料：2.6トン</li>
+<li>対応する地上回収拠点：3拠点</li></ul></div></details>
+  <blockquote>「宇宙で生まれた価値を、地球の日常へ。」</blockquote>
+</article>
+<article class="achievement" id="project-regolith">
+  <div class="achievement-year">2036<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT REGOLITH</p><h3>月面での現地材料による施工</h3>
+  <p class="achievement-description">月面の実証エリアで、現地材料を使った走行路と設備基礎を施工。
+掘削、運搬、加工、施工を遠隔監視下のロボット群が担当した。</p>
+  <details><summary aria-label="成果を見る：PROJECT REGOLITH"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>施工した走行路：1.6km</li>
+<li>建設した設備基礎：12基</li>
+<li>完成構造物に占める現地調達材料：質量比78%</li></ul></div></details>
+  <blockquote>「次の産業圏には、まだ道がない。だから、つくる。」</blockquote>
+</article>
+<article class="achievement" id="project-constellation">
+  <div class="achievement-year">2038<span aria-hidden="true">↗</span></div>
+  <p class="eyebrow">PROJECT CONSTELLATION</p><h3>宇宙工場ネットワークの統合</h3>
+  <p class="achievement-description">6つの軌道上無人工場をMISSION OSで接続。
+製造設備、電力、ロボット、物流を一つの生産ネットワークとして統合した。</p>
+  <details><summary aria-label="成果を見る：PROJECT CONSTELLATION"><span>成果を見る</span><span class="disclosure-icon" aria-hidden="true">＋</span></summary><div class="detail-body"><ul class="outcome-list"><li>稼働中の宇宙工場：6拠点</li>
+<li>2038年の年間製造量：18.4トン</li>
+<li>創業以来の累計帰還ミッション：128回</li>
+<li>2038年の共同開発案件：42件</li></ul></div></details>
+  <blockquote>「ひとつの工場から、宇宙に広がる産業へ。」</blockquote>
+</article></div>
     </section>
-    <section class="section container" id="process" aria-labelledby="process-title">
-      <div class="section-heading"><div><p class="eyebrow">THE PROCESS / 03</p><h2 id="process-title">ひらめきから、ひとつずつ。</h2></div><p>考える。つくる。磨く。<br>シンプルな積み重ねを、大切に。</p></div>
-      <ol class="process-grid"><li><span class="step-number">01</span><h3>Discover</h3><p class="step-jp">見つける</p><p>テーマを観察し、問いを立てる。<br>つくるものの軸を見つけます。</p></li><li><span class="step-number">02</span><h3>Make</h3><p class="step-jp">かたちにする</p><p>アイデアを小さく試作する。<br>見て、触れて、確かめます。</p></li><li><span class="step-number">03</span><h3>Refine</h3><p class="step-jp">磨きつづける</p><p>気づきをもとに、細部を整える。<br>次の可能性へつなげます。</p></li></ol>
-    </section>
-    <section class="explore-band" id="explore" aria-labelledby="explore-title"><div class="container"><p class="eyebrow">KEEP EXPLORING</p><h2 id="explore-title">次のアイデアも、ここから。</h2><p>RBITAL FORGEの小さな実験を、作品から。</p><a class="button" href="#work">作品をもう一度見る <span aria-hidden="true">↗</span></a></div></section>
+    <section class="integration-band" aria-labelledby="integration-title"><div class="section container"><div class="section-heading"><div><p class="eyebrow">ONE INDUSTRIAL ECOSYSTEM / 04</p><h2 id="integration-title">宇宙でつくる。<br>地球へ届ける。<br>次の製造へ戻す。</h2></div><p>研究から商用生産までを、一つの窓口で。<br>事業のつながりそのものが、私たちの強み。</p></div><ol class="value-chain"><li><span>01</span>研究</li><li><span>02</span>製造</li><li><span>03</span>建設・運用</li><li><span>04</span>輸送・回収</li><li><span>05</span>再資源化</li></ol><div class="strength-copy"><p>ORBITAL FORGEの強みは、研究、製造、建設、運用、輸送、回収、再資源化までを一貫して提供できること。</p>
+<p>顧客は複数の宇宙関連事業者を個別に組み合わせず、一つの窓口で研究から商用生産までを進められる。</p>
+<p>宇宙工場を増やすことで製造能力を拡張し、定期物流によって地球との供給網を整え、運用システムによって複数拠点を統合する。</p>
+<p>宇宙でつくり、宇宙で使い、地球へ届け、資源を次の製造へ戻す。
+この循環全体を、ORBITAL FORGEの事業とする。</p></div></div></section>
+    <section class="section container company-grid" id="company" aria-labelledby="company-title"><div><p class="eyebrow">COMPANY / 05</p><h2 id="company-title">ORBITAL FORGE</h2><p class="japanese-name">オービタルフォージ株式会社</p><div class="company-copy"><p>ORBITAL FORGEは、宇宙空間に新しい産業基盤をつくる企業。
+軌道上の無人工場を中心に、先端素材の製造、ロボットによる宇宙建設、地球と宇宙をつなぐ物流、月面インフラまでを一貫して手がける。</p>
+<p>宇宙を「探索する場所」から「ものづくりが行われる場所」へ変え、地上では実現が難しかった製品や設備を生み出す。</p></div><p class="fiction-note">企業・事業・実績・数値は、2038年を舞台とした創作です。</p></div><div><dl class="company-facts"><div><dt>設立</dt><dd>2028年</dd></div>
+<div><dt>本社</dt><dd>東京</dd></div>
+<div><dt>従業員</dt><dd>1,280人</dd></div>
+<div><dt>チーム</dt><dd>28の国と地域から集まる専門家</dd></div>
+<div><dt>軌道上製造拠点</dt><dd>6拠点</dd></div>
+<div><dt>年間製造量</dt><dd>18.4トン</dd></div>
+<div><dt>累計帰還ミッション</dt><dd>128回</dd></div>
+<div><dt>年間共同開発案件</dt><dd>42件</dd></div></dl><p class="reference-note">※ 数値は2038年末時点の架空設定。</p></div></section>
+    <section class="closing-band"><div class="container"><p class="eyebrow">OUR PHILOSOPHY</p><h2>地球の外でつくり、地球の未来へ届ける。</h2><a class="button" href="#business">事業内容へ <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="container site-footer"><a class="brand" href="#top">RBITAL FORGE</a><p>Concept portfolio — サンプルコンテンツ</p><a href="#top">ページの先頭へ <span aria-hidden="true">↑</span></a></footer>
+  <footer class="container site-footer"><a class="brand" href="#top">ORBITAL FORGE</a><p>FICTIONAL COMPANY / 2038<br>企業・事業・実績・数値は、2038年を舞台とした創作です。</p><a href="#top">ページの先頭へ <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="{{NAME}} — {{TAGLINE}} 2038年を舞台にした架空の宇宙産業企業。軌道上製造、宇宙建設、物流、月面インフラの事業設定を紹介します。">
+  <title>{{NAME}} — {{TAGLINE}}</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="site.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="{{NAME}} トップへ"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="m4 25 24-18M20 25l7 3" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>{{NAME}}</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>メニュー <span aria-hidden="true">＋</span></button>
+      <nav id="site-nav" aria-label="メインナビゲーション"><a href="#business">事業内容</a><a href="#facility">主力施設</a><a href="#achievements">代表実績</a><a class="button button-small" href="#company">企業概要 <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow"><span class="badge">FICTIONAL COMPANY / 2038</span> SPACE IS OUR NEXT FACTORY.</p>
+        <h1 id="hero-title">{{HERO_HEADLINE}}</h1>
+        <p class="hero-description">{{PHILOSOPHY}}<br>軌道上の無人工場から、月面の産業基盤まで。</p>
+        <div class="hero-actions"><a class="button" href="#business">12の事業を見る <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#facility">FORGE-01を知る</a></div>
+        <p class="fiction-note">{{FICTION_NOTICE}}</p>
+        <div class="mission-stage" role="img" aria-label="MISSION OSの架空の操作画面。FORGE-01のコンセプト図と、2038年末の架空設定を表示しています。実際の運用画面ではありません。">
+          <div class="mission-desktop">
+            <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>MISSION OS / CONCEPT INTERFACE</span><span>2038</span></div>
+            <div class="mission-layout"><div class="mission-sidebar"><strong>OF / MISSION OS</strong><span class="selected">Overview</span><span>Manufacturing</span><span>Robotics</span><span>Logistics</span><span>Utilities</span><small>FICTIONAL DATA<br>NOT A LIVE SYSTEM</small></div><div class="mission-canvas"><div class="mission-topline"><span>ORBITAL NETWORK</span><span>FORGE-01 / LEO</span></div><div class="mission-title"><strong>Manufacturing.<br>Beyond Earth.</strong><span>420 <small>km</small></span></div><img src="assets/forge-platform.svg" alt="" width="1200" height="800" fetchpriority="high"><div class="mission-stats"><span>FACTORIES<strong>6</strong></span><span>ANNUAL OUTPUT<strong>18.4 <small>t</small></strong></span><span>RETURN MISSIONS<strong>128</strong></span></div></div></div>
+          </div>
+          <div class="mission-mobile"><div class="phone-camera"></div><p>MISSION OS</p><span class="mobile-tag">2038 / CONCEPT</span><strong class="mobile-heading">One network.<br>New possibilities.</strong><img src="assets/forge-platform.svg" alt="" width="1200" height="800"><div class="mobile-metric"><span>軌道上製造拠点</span><strong>6 <small>拠点</small></strong></div><div class="mobile-bottom"><span>年間製造量</span><strong>18.4 t</strong></div><div class="phone-home"></div></div>
+        </div>
+        <p class="preview-note">FORGE-01とMISSION OSのコンセプトイメージ。実際の施設・運用画面ではありません。</p>
+      </div>
+    </section>
+    <section class="metrics-band" aria-label="2038年末の架空の事業規模"><div class="container"><div class="metrics"><div><strong>6<span>拠点</span></strong><p>軌道上製造拠点</p></div><div><strong>18.4<span>トン</span></strong><p>年間製造量</p></div><div><strong>128<span>回</span></strong><p>累計帰還ミッション</p></div><div><strong>42<span>件</span></strong><p>年間共同開発案件</p></div></div><p class="reference-note">{{REFERENCE_NOTE}}</p></div></section>
+    <section class="section container" id="business" aria-labelledby="business-title">
+      <div class="section-heading"><div><p class="eyebrow">OUR BUSINESS / 01</p><h2 id="business-title">宇宙の産業を、<br>ひとつにつなぐ。</h2></div><p>研究から製造、建設、運用、輸送、再資源化まで。<br>宇宙でものづくりを続けるための、12の事業。</p></div>
+      <div class="business-tools"><p class="fiction-label">2038年を舞台とした架空の事業設定</p><div class="filters" role="group" aria-label="事業のカテゴリー" hidden>{{FILTERS}}</div></div>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="business-grid">{{BUSINESSES}}</div>
+    </section>
+    <section class="facility-band" id="facility" aria-labelledby="facility-title"><div class="section container">
+      <div class="section-heading"><div><p class="eyebrow">FLAGSHIP FACILITY / 02</p><h2 id="facility-title">{{FACILITY_NAME}}</h2></div><p>{{FACILITY_TITLE}}<br>2031年稼働開始 — 架空の施設設定</p></div>
+      <figure class="facility-visual"><img src="assets/forge-platform.svg" alt="円筒状の製造モジュール、トラス、太陽電池パネル、ロボットアームを組み合わせたFORGE-01のコンセプト図" width="1200" height="800" loading="lazy"><figcaption><span>FORGE-01 / CONCEPT ILLUSTRATION</span><span>LOW EARTH ORBIT</span></figcaption></figure>
+      <div class="facility-grid"><div class="facility-copy"><p class="eyebrow">THE FIRST FACTORY</p><h3>宇宙製造を、<br>ひとつの拠点から。</h3>{{FACILITY_DESCRIPTION}}<p class="facility-role">{{FACILITY_ROLE}}</p></div><div><dl class="facility-specs"><div><dt>地球からの高度</dt><dd>420<span>km</span></dd></div><div><dt>設計上の最大構成</dt><dd>24<span>モジュール</span></dd></div></dl><h3 class="equipment-title">主な設備</h3><ul class="equipment-list">{{FACILITY_EQUIPMENT}}</ul></div></div>
+    </div></section>
+    <section class="section container" id="achievements" aria-labelledby="achievements-title">
+      <div class="section-heading"><div><p class="eyebrow">MILESTONES / 03</p><h2 id="achievements-title">最初の工場から、<br>宇宙に広がる産業へ。</h2></div><p>2031 — 2038<br>6つの代表実績。すべて創作のプロジェクトです。</p></div>
+      <div class="achievement-grid">{{ACHIEVEMENTS}}</div>
+    </section>
+    <section class="integration-band" aria-labelledby="integration-title"><div class="section container"><div class="section-heading"><div><p class="eyebrow">ONE INDUSTRIAL ECOSYSTEM / 04</p><h2 id="integration-title">宇宙でつくる。<br>地球へ届ける。<br>次の製造へ戻す。</h2></div><p>研究から商用生産までを、一つの窓口で。<br>事業のつながりそのものが、私たちの強み。</p></div><ol class="value-chain"><li><span>01</span>研究</li><li><span>02</span>製造</li><li><span>03</span>建設・運用</li><li><span>04</span>輸送・回収</li><li><span>05</span>再資源化</li></ol><div class="strength-copy">{{STRENGTHS}}</div></div></section>
+    <section class="section container company-grid" id="company" aria-labelledby="company-title"><div><p class="eyebrow">COMPANY / 05</p><h2 id="company-title">{{NAME}}</h2><p class="japanese-name">{{JAPANESE_NAME}}</p><div class="company-copy">{{DESCRIPTION}}</div><p class="fiction-note">{{FICTION_NOTICE}}</p></div><div><dl class="company-facts">{{FACTS}}</dl><p class="reference-note">{{REFERENCE_NOTE}}</p></div></section>
+    <section class="closing-band"><div class="container"><p class="eyebrow">OUR PHILOSOPHY</p><h2>{{PHILOSOPHY}}</h2><a class="button" href="#business">事業内容へ <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="container site-footer"><a class="brand" href="#top">{{NAME}}</a><p>FICTIONAL COMPANY / 2038<br>{{FICTION_NOTICE}}</p><a href="#top">ページの先頭へ <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>

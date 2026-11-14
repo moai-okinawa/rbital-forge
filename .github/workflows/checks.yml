@@ -16,7 +16,9 @@ jobs:
         with:
           persist-credentials: false
       - name: Check static files
-        run: python3 scripts/check-site.py
+        run: |
+          python3 scripts/build-site.py --check
+          python3 scripts/check-site.py
       - name: Check JavaScript syntax
         run: node --check dist/site.js
       - name: Check interactions

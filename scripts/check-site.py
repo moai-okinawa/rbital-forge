@@ -8,6 +8,7 @@ layout, actual keyboard behavior, or text placed over images/gradients.
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
+import json
 import re
 import sys
 from urllib.parse import unquote, urlsplit
@@ -35,6 +36,7 @@ class Page(HTMLParser):
         self.h1_count = 0
         self.stack = []
         self.errors = []
+        self.body_text = []
 
     def error_at(self, message):
         self.errors.append(f"{self.path.name}:{self.getpos()[0]}: {message}")
@@ -73,6 +75,12 @@ class Page(HTMLParser):
         if tag in self.stack:
             index = len(self.stack) - 1 - self.stack[::-1].index(tag)
             del self.stack[index:]
+
+    def handle_data(self, data):
+        # Closed details still contain readable content when expanded. This is
+        # a source-content check, not a simulation of CSS visibility.
+        if "body" in self.stack and not {"head", "script", "style"}.intersection(self.stack):
+            self.body_text.append(data)
 
 
 def read_page(path):
@@ -192,6 +200,42 @@ def check_contrast(errors):
     return results
 
 
+def public_values(value, path="company"):
+    """Yield publication content, excluding internal routing/filter keys."""
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if key not in {"id", "category"}:
+                yield from public_values(item, f"{path}.{key}")
+    elif isinstance(value, list):
+        for index, item in enumerate(value):
+            yield from public_values(item, f"{path}[{index}]")
+    elif isinstance(value, str) or type(value) in {int, float}:
+        yield path, str(value)
+
+
+def normalize_content(value):
+    # Layout line breaks, indentation, and inline HTML boundaries must not
+    # change whether a Japanese or English content field is present.
+    return re.sub(r"\s+", "", value)
+
+
+def check_company_content(page, errors):
+    data = json.loads((ROOT / "content" / "company.json").read_text(encoding="utf-8"))
+    text = normalize_content("".join(page.body_text))
+    fields = list(public_values(data))
+    for path, value in fields:
+        expected = normalize_content(value)
+        if expected and expected not in text:
+            preview = " ".join(value.split())[:100]
+            errors.append(f"missing company content in HTML body: {path}: {preview}")
+    businesses = data.get("businesses", [])
+    achievements = data.get("achievements", [])
+    return (f"{len(fields)} publication fields; {len(businesses)} businesses; "
+            f"{sum(len(item.get('services', [])) for item in businesses)} services; "
+            f"{len(achievements)} achievements; "
+            f"{sum(len(item.get('outcomes', [])) for item in achievements)} outcomes")
+
+
 def main():
     page = read_page(DIST / "index.html")
     errors = list(page.errors)
@@ -203,6 +247,7 @@ def main():
     references = check_references(page, errors)
     svgs = check_svgs(errors)
     contrast = check_contrast(errors)
+    content = check_company_content(page, errors)
     if errors:
         print(f"FAIL: {len(errors)} issue(s)", file=sys.stderr)
         for error in errors:
@@ -210,6 +255,7 @@ def main():
         return 1
     print(f"PASS: HTML structure, {references} local references, {len(page.images)} images, {svgs} SVGs")
     print("Contrast: " + "; ".join(contrast))
+    print("Content: " + content)
     print("Source checks only; rendered layout and browser behavior are not verified.")
     return 0
 

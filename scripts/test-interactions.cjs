@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
 const code = fs.readFileSync(path.join(__dirname, '../dist/site.js'), 'utf8');
+const company = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/company.json'), 'utf8'));
 
 function fixture(isMobile = false) {
   const document = { activeElement: null, handlers: {}, addEventListener(type, fn) { this.handlers[type] = fn; } };
@@ -16,19 +17,19 @@ function fixture(isMobile = false) {
       focus() { document.activeElement = this; },
     }, options);
   }
-  const categories = ['brand', 'web', 'experiment'];
-  const projects = categories.map(category => element({ dataset: { category } }));
+  const categories = [...new Set(company.businesses.map(business => business.category))];
+  const projects = company.businesses.map(({ category }) => element({ dataset: { category } }));
   const buttons = ['all', ...categories].map(filter => element({ dataset: { filter }, textContent: filter }));
   const filters = element({ hidden: true, querySelectorAll: () => buttons });
   const status = element();
   const toggle = element({ hidden: true, attrs: { 'aria-expanded': 'false' } });
   const destination = element();
-  const link = element({ attrs: { href: '#work' } });
+  const link = element({ attrs: { href: '#business' } });
   link.closest = () => link;
   const nav = element({ contains: item => item === link, querySelector: () => link });
-  const nodes = { '.filters': filters, '#filter-status': status, '.menu-toggle': toggle, '#site-nav': nav, '#work': destination };
+  const nodes = { '.filters': filters, '#filter-status': status, '.menu-toggle': toggle, '#site-nav': nav, '#business': destination };
   document.querySelector = selector => nodes[selector] || null;
-  document.querySelectorAll = () => projects;
+  document.querySelectorAll = selector => selector === '.business' ? projects : [];
   const media = { matches: isMobile, addEventListener(type, fn) { this.onChange = fn; } };
   const window = { matchMedia: () => media };
   vm.runInNewContext(code, { document, window });
@@ -51,11 +52,12 @@ test('each filter selects its category, updates pressed state and announces coun
   assert.equal(f.filters.hidden, false);
   for (const button of f.buttons.slice(1)) {
     button.handlers.click();
-    assert.equal(f.projects.filter(project => !project.hidden).length, 1);
+    const expectedCount = company.businesses.filter(business => business.category === button.dataset.filter).length;
+    assert.equal(f.projects.filter(project => !project.hidden).length, expectedCount);
     assert.equal(f.projects.find(project => !project.hidden).dataset.category, button.dataset.filter);
     assert.equal(f.buttons.filter(item => item.attrs['aria-pressed'] === 'true').length, 1);
     assert.equal(button.attrs['aria-pressed'], 'true');
-    assert.match(f.status.textContent, /1件/);
+    assert.equal(f.status.textContent, `${expectedCount}件の事業を表示しています。`);
   }
 });
 test('all restores projects after repeated filter changes', () => {
@@ -64,7 +66,7 @@ test('all restores projects after repeated filter changes', () => {
   f.buttons[3].handlers.click();
   f.buttons[0].handlers.click();
   assert.ok(f.projects.every(project => !project.hidden));
-  assert.match(f.status.textContent, /3件/);
+  assert.equal(f.status.textContent, `${company.businesses.length}件の事業を表示しています。`);
 });
 test('mobile menu starts collapsed and can toggle both ways', () => {
   const f = fixture(true);

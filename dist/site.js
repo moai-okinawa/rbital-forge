@@ -2,7 +2,7 @@
   'use strict';
   // Details/summary and navigation links remain usable without JavaScript.
   const filters = document.querySelector('.filters');
-  const projects = [...document.querySelectorAll('.project')];
+  const projects = [...document.querySelectorAll('.business')];
   const status = document.querySelector('#filter-status');
   if (filters && projects.length && status) {
     filters.hidden = false;
@@ -16,7 +16,7 @@
           if (!project.hidden) count += 1;
         });
         buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-        status.textContent = `${button.textContent}：${count}件の作品を表示しています。`;
+        status.textContent = `${count}件の事業を表示しています。`;
       });
     });
   }
