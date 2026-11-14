@@ -43,12 +43,14 @@ node --check dist/site.js
 node scripts/test-interactions.cjs
 ```
 
-HTMLの参照・画像・見出し・構造、SVG、配色のコントラスト、フィルターとメニューの動作をコードで確認します。これは実際のブラウザのレイアウト、読み上げ、キーボード操作の確認を代替しません。コンピューターユーズ・実画面確認は行っていません。
+HTMLの参照・画像・見出し・構造、SVG、配色のコントラスト、フィルターとメニューの動作をコードで確認します。これは実際のブラウザのレイアウト、読み上げ、キーボード操作の確認を代替しません。サイトの実画面確認は未実施です。
 
 ## GitHub
 
-予定リポジトリ: `moai-okinawa/rbital-forge`（Public）。このフォルダーだけが対象です。親フォルダーや `portfolio-kawasakiZ` は含めません。
+リポジトリ: [moai-okinawa/rbital-forge](https://github.com/moai-okinawa/rbital-forge)（Public）。このフォルダーだけが対象です。親フォルダーや `portfolio-kawasakiZ` は含めません。
+
+サイト: [RBITAL FORGE](https://moai-okinawa.github.io/rbital-forge/)
 
 push時には `Check static site` のGitHub Actionsが上記のコード検証を実行します。
 
-サイトとしての公開も行う場合は、リポジトリの **Settings → Pages → Source** を **GitHub Actions** にして、**Actions → Deploy to GitHub Pages → Run workflow** を実行してください。Pages用ワークフローは手動起動です。リポジトリのPublic設定と、ウェブサイトの公開設定は別です。
+公開元は **Settings → Pages → Source → GitHub Actions** です。更新を再公開するときは、変更をpushした後、**Actions → Deploy to GitHub Pages → Run workflow** で `main` を選んで実行してください。Pages用ワークフローは `workflow_dispatch` による手動起動です。
